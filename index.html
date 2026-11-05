@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <title>KB Seguridad Electrica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- container -->
+    <div class="sm:pt-0 pt-[78px]">
+      <!-- nabvar -->
+      <nav
+      class="w-full bg-gradient-to-r from-indigo-800 via-blue-700 to-blue-600 text-white py-2 fixed md:static top-0 z-50">
+      <div class="max-w-[1100px] mx-auto flex justify-between items-center sm:px-0 px-4">
+        <img src="img/logo.gif" alt="logo" class="h-16 w-16 rounded-lg" />
+        <!-- Botón hamburguesa / X -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <!-- Icono hamburguesa -->
+          <svg id="icon-hamburger" class="w-8 h-8 block" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <!-- Icono X -->
+          <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <!-- Menú -->
+        <ul id="menu"
+          class="hidden md:flex gap-6 flex-col md:flex-row absolute md:static top-8 right-8 w-60 rounded-xl md:w-auto bg-gray-800/90 md:bg-transparent px-4 md:px-0 py-4 sm:mt-0 mt-6 md:py-0 z-10">
+          <li>
+            <a href="#home"
+              class="flex items-center gap-2 py-2 font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-orange-400 hover:to-orange-300 hover:bg-clip-text hover:text-transparent">
+              <img src="img/home.png" alt="Inicio" class="w-5 h-5" /> Inicio
+            </a>
+          </li>
+          <li>
+            <a href="#services"
+              class="flex items-center gap-2 py-2 font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-orange-400 hover:to-orange-300 hover:bg-clip-text hover:text-transparent">
+              <img src="img/engine.png" alt="Servicios" class="w-5 h-5" />
+              Servicios
+            </a>
+          </li>
+          <li>
+            <a href="#us"
+              class="flex items-center gap-2 py-2 font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-orange-400 hover:to-orange-300 hover:bg-clip-text hover:text-transparent">
+              <img src="img/question.png" alt="Quienes Somos?" class="w-5 h-5" />
+              Quienes Somos?
+            </a>
+          </li>
+          <li>
+            <a href="#contact"
+              class="flex items-center gap-2 py-2 font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-orange-400 hover:to-orange-300 hover:bg-clip-text hover:text-transparent">
+              <img src="img/contact.png" alt="Contacto" class="w-5 h-5" />
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      <!-- hero section -->
+      <section class="w-full bg-gradient-to-r from-indigo-800 via-blue-700 to-blue-600 text-white py-6" id="home">
+      <div class="max-w-[1100px] mx-auto sm:flex sm:px-0 px-4 sm:gap-16">
+        <div class="sm:w-3/5 w-full">
+          <h1 class="text-5xl tracking-wider">
+            <span
+              class="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300 bg-clip-text text-transparent font-bold">KB</span>
+            Seguridad Electrónica
+          </h1>
+          <p class="text-lg text-gray-200 my-4">
+            Ofrecemos instalación y mantenimiento de cercos eléctricos de alta calidad para proteger hogares, empresas y
+            propiedades. Usamos tecnología avanzada y contamos con un equipo técnico especializado para garantizar tu
+            seguridad.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://wa.me/18098501333" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-green-700 via-green-600 to-green-400 
+          rounded-md text-white font-bold py-2 px-4 
+          hover:scale-105 transition-transform duration-200 
+          hover:shadow-[0_4px_20px_rgba(16,185,129,0.7)]">
+              <img src="img/ws.png" alt="WhatsApp" class="h-6 w-6" />
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/kbseguridadelectronica?utm_source=qr&amp;igsh=Y2JuaTl4c3p0dWt6" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
+          text-white font-semibold px-3 py-2 rounded-md shadow-lg 
+          transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_20px_rgba(255,115,0,0.7)]">
+              <img src="img/inst_white.png" alt="Instagram" class="w-6 h-6" />
+              +25k seguidores
+            </a>
+          </div>
+        </div>
+        <div class="sm:w-2/5 w-full flex justify-end sm:mt-0 mt-8">
+          <video src="img/intro.mp4" controls class="w-96 shadow-[0_8px_30px_rgba(255,115,0,0.7)] rounded-lg">
+          </video>
+        </div>
+      </div>
+    </section>
+      <!-- css wave -->
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#1e40af"
+          fill-opacity="1"
+          d="M0,64L60,58.7C120,53,240,43,360,53.3C480,64,600,96,720,90.7C840,85,960,43,1080,42.7C1200,43,1320,85,1380,106.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+        ></path>
+      </svg> -->
+    </div>
+    
+    <!-- services section -->
+    <section id="services">
+    <h2
+      class="text-3xl text-center font-black text-gray-900 leading-tight uppercase italic my-8 tracking-wider">
+      SERVICIOS
+    </h2>
+    <div class="max-w-[1100px] mx-auto">
+      <div class="services grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 gap-8 sm:px-0 px-4"></div>
+    </div>
+  </section>
+    
+    <!-- about us section -->
+    <div id="us">
+      <h2
+      class="text-3xl text-center font-black text-gray-900 leading-tight uppercase italic my-8 tracking-wider">
+      QUIENES SOMOS?
+    </h2>
+      <div class="max-w-[1100px] mx-auto sm:px-0 px-4">
+        <div class="mb-4">
+          <!-- Carrusel de imágenes -->
+          <div class="relative w-full overflow-hidden">
+            <div
+              id="carousel"
+              class="flex gap-4 transition-transform duration-500 ease-in-out"
+            >
+                <video src="img/vid1.mp4" class="w-full h-40 object-cover rounded cursor-pointer" onclick="openModal(this.src)" muted playsinline> </video>
+                <video src="img/vid3.mp4" class="w-full h-40 object-cover rounded cursor-pointer" onclick="openModal(this.src)" muted playsinline> </video>
+            <video src="img/vid4.mp4" class="w-full h-40 object-cover rounded cursor-pointer" onclick="openModal(this.src)" muted playsinline> </video>
+            <video src="img/vid5.mp4" class="w-full h-40 object-cover rounded cursor-pointer" onclick="openModal(this.src)" muted playsinline> </video>
+            <video src="img/vid6.mp4" class="w-full h-40 object-cover rounded cursor-pointer" onclick="openModal(this.src)" muted playsinline> </video>
+            <video src="img/vid8.mp4" class="w-full h-40 object-cover rounded cursor-pointer" onclick="openModal(this.src)" muted playsinline> </video>
+            <video src="img/vid11.mp4" class="w-full h-40 object-cover rounded cursor-pointer" onclick="openModal(this.src)" muted playsinline> </video>
+                <img
+                src="img/img53.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img52.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img51.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img50.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img49.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img48.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img47.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img46.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img45.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img44.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img43.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img42.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img41.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img40.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img39.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+                <img
+                src="img/img38.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img32.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img33.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img35.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img36.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img37.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img24.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+              <img
+                src="img/img26.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img27.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img28.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img29.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img30.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img17.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img18.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img19.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img20.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img21.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img22.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img23.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img1.jpeg"
+                alt="imagen 1"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img2.jpeg"
+                alt="imagen 2"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img3.jpeg"
+                alt="imagen 3"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img4.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img5.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img6.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img7.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img8.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img9.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img10.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img11.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img12.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img13.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img14.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <img
+                src="img/img15.jpeg"
+                alt="imagen 4"
+                class="w-full h-40 object-cover rounded cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <!-- Puedes agregar más imágenes aquí -->
+            </div>
+
+            <!-- Botones de navegación -->
+            <button
+              onclick="prevSlide()"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black rounded-full shadow w-8 h-8 text-white"
+            >
+              ←
+            </button>
+            <button
+              onclick="nextSlide()"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black rounded-full shadow w-8 h-8 text-white"
+            >
+              →
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            id="imageModal"
+            class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden"
+          >
+            <span
+              class="absolute top-4 right-6 text-white text-3xl cursor-pointer"
+              onclick="closeModal()"
+              >×</span
+            >
+            <img
+              id="modalImage"
+              src=""
+              class="max-w-full max-h-full rounded shadow-lg"
+            />
+          </div>
+          <div class="text-gray-700 space-y-2 text-lg font-sans italic leading-relaxed mt-4">
+          <p class="border-l-4 border-orange-500 pl-3">
+            Somos una empresa en República Dominicana dedicada a la seguridad electrónica.
+            Protegemos hogares y negocios con sistemas confiables como alarmas, control de acceso,
+            motores para portones y cercos eléctricos.
+          </p>
+          <p class="border-l-4 border-orange-500 pl-3">
+            Ofrecemos mantenimiento preventivo y asesoría personalizada para que cada sistema
+            funcione correctamente. Nuestro compromiso es brindar un servicio profesional, accesible
+            y enfocado en su tranquilidad.
+          </p>
+          <p class="border-l-4 border-orange-500 pl-3">
+            Contamos con reservas y atención vía WhatsApp para agendar citas de forma rápida.
+            Si busca seguridad confiable para su hogar o negocio, estamos listos para ayudarle.
+          </p>
+        </div>
+        </div>
+      </div>
+      <!-- video content -->
+      <!--<div class="max-w-[900px] mx-auto">-->
+      <!--    <video src="img/img38.mp4" autoplay controls class="object-cover rounded"></video>-->
+      <!--</div>-->
+<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 py-6 text-white" id="contact">
+  <div class="max-w-[1100px] mx-auto sm:px-0 px-4 sm:flex gap-40">
+    <div>
+      <span class="font-bold text-center sm:text-left block 
+                   bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+        Redes Sociales
+      </span>
+      <div>
+        <ul class="flex gap-3 justify-center sm:justify-start mt-2">
+          <!-- Íconos de redes sociales -->
+        </ul>
+      </div>
+      <p class="text-center sm:text-left text-lg mt-1">
+        📩 kbseguridadelectronica@gmail.com
+      </p>
+      <p class="text-center sm:text-left text-lg mt-1">
+        ☎️ 809-222-6014
+      </p>
+    </div>
+
+    <div class="sm:mt-0 mt-3">
+      <span class="font-bold text-center sm:text-left block 
+                   bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+        Ubicación
+      </span>
+      <p class="text-center text-sm sm:text-left block mt-2">
+        Santo Domingo Oeste, Manoguallabo., Hato Nuevo, Distrito Nacional,
+        República Dominicana 11003
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-6 max-w-[1100px] mx-auto">
+    <p class="text-center sm:text-left block text-xs text-gray-300">
+      &copy; 2025 KB Seguridad Electrónica | Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+    </div>
+    <!-- JS -->
+    <script src="index.js?v=1.0.8"></script>
+  </body>
+</html>
