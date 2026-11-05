@@ -176,7 +176,6 @@ function prevSlide() {
   }
 }
 
-<<<<<<< HEAD
 let touchStartX = null;
 let touchStartY = 0;
 let suppressCarouselClickUntil = 0;
@@ -322,30 +321,3 @@ imageModal.addEventListener("touchcancel", () => {
 
 window.addEventListener("resize", updateCarousel);
 updateCarousel();
-=======
-// Modal que soporta imagen y video
-function openModal(src) {
-  const modal = document.getElementById("imageModal");
-  const content = document.getElementById("modalImage");
-
-  // Detecta si es video por extensión
-  const isVideo = /\.(mp4|webm|ogg)$/i.test(src);
-
-  if (isVideo) {
-    // Reemplaza el <img> por un <video>
-    content.outerHTML = `<video id="modalImage" src="${src}" class="max-w-full max-h-full rounded shadow-lg" controls autoplay></video>`;
-  } else {
-    // Reemplaza el <video> por un <img>
-    content.outerHTML = `<img id="modalImage" src="${src}" class="max-w-full max-h-full rounded shadow-lg" />`;
-  }
-
-  modal.classList.remove("hidden");
-}
-
-function closeModal() {
-  document.getElementById("imageModal").classList.add("hidden");
-}
-
-window.addEventListener("resize", updateCarousel);
-updateCarousel();
->>>>>>> d798f3d4de06d22e730dc5c6f36562a25e9709c0
