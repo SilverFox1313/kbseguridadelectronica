@@ -101,52 +101,34 @@ social.forEach(({ img, link }) => {
   ul.appendChild(li);
 });
 
-// navbar
-// const menuBtn = document.getElementById("menu-btn");
-// const menu = document.getElementById("menu");
-// const iconHamburger = document.getElementById("icon-hamburger");
-// const iconClose = document.getElementById("icon-close");
-// menuBtn.addEventListener("click", () => {
-//   menu.classList.toggle("hidden");
-//   iconHamburger.classList.toggle("hidden");
-//   iconClose.classList.toggle("hidden");
-// });
-function initMobileMenu(menuBtnId, menuId, iconHamburgerId, iconCloseId) {
-  const menuBtn = document.getElementById(menuBtnId);
-  const menu = document.getElementById(menuId);
-  const iconHamburger = document.getElementById(iconHamburgerId);
-  const iconClose = document.getElementById(iconCloseId);
+const mobileNavLinks = [...document.querySelectorAll(".mobile-nav-link")];
 
-  // Abrir/cerrar con el botón
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    menu.classList.toggle("hidden");
-    iconHamburger.classList.toggle("hidden");
-    iconClose.classList.toggle("hidden");
-  });
+function setActiveMobileNavLink(activeLink) {
+  mobileNavLinks.forEach((link) => {
+    const isActive = link === activeLink;
+    link.classList.toggle("is-active", isActive);
 
-  // Cerrar al hacer clic en un enlace
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.add("hidden");
-      iconHamburger.classList.remove("hidden");
-      iconClose.classList.add("hidden");
-    });
-  });
-
-  // Cerrar al hacer clic fuera
-  document.addEventListener("click", (e) => {
-    const isClickInsideMenu = menu.contains(e.target);
-    const isClickOnButton = menuBtn.contains(e.target);
-
-    if (!isClickInsideMenu && !isClickOnButton) {
-      menu.classList.add("hidden");
-      iconHamburger.classList.remove("hidden");
-      iconClose.classList.add("hidden");
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
     }
   });
 }
-initMobileMenu("menu-btn", "menu", "icon-hamburger", "icon-close");
+
+function updateActiveMobileNavLink() {
+  const activeHash = window.location.hash || "#home";
+  const activeLink =
+    mobileNavLinks.find((link) => link.getAttribute("href") === activeHash) ||
+    mobileNavLinks[0];
+  setActiveMobileNavLink(activeLink);
+}
+
+mobileNavLinks.forEach((link) => {
+  link.addEventListener("click", () => setActiveMobileNavLink(link));
+});
+window.addEventListener("hashchange", updateActiveMobileNavLink);
+updateActiveMobileNavLink();
 
 // carrusel
 let currentIndex = 0;
